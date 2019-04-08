@@ -1,0 +1,602 @@
+ 
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      }
+  
+.loader >.loader2{
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top:40%;
+    
+    animation: spin 2s linear infinite
+}
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+*{
+    box-sizing: border-box;
+  }
+.background{
+    width: 100%;
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.header{
+    padding-left:0px;
+    padding-right: 0px;
+}
+.profileCard{
+    background-color: #06A763;
+    width: 70%;
+    height: 400px;
+    position: relative;
+    bottom: 210px;
+   
+}
+.profile{
+padding-right: 0px
+}
+.dpImg{
+    height: 400px;
+    width:400px;
+} 
+
+.triangleslope{
+    position: absolute;
+    left: 52%;
+    height: 400px;
+    border-left: 54px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 400px solid#06A763;
+}
+
+.userDetails .nameHeading {
+    margin-left: 40px;
+    margin-top: 65px;
+    color:white
+}
+.upperCase{
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    font-weight: 600;
+    font-size:2.18rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29)
+}
+.capitalize{
+    text-transform: capitalize;
+    font-weight: 400;
+    margin-bottom: 30px;
+    font-size: 1.3em;
+    text-shadow:2px 2px 4px rgba(0, 0, 0, 0.29)
+}
+.contactId{
+    list-style: none;
+    color:white
+}
+
+.contactId li .icons{
+    font-size:20px;
+}
+.text{
+    font-weight: 400;
+    font-size:20px;
+    margin-left: 5px;
+}
+.intro{
+    width: 70%;
+    position: relative;
+    bottom: 130px;
+    background-color: floralwhite;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.card{
+    background-color: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+
+}
+.introductionText{
+    font-weight: 400;
+    font-size:20px;
+    text-align: justify;
+    padding: 40px;
+    color:darkgoldenrod;
+    border-bottom: 1px solid wheat;
+    
+}
+.button{
+    text-align: center;
+    height: 60px;
+    margin-top: 24px;
+   
+}
+.color{
+    background-color: #06A763;
+    width:180px;
+    text-transform: uppercase;
+    color:white;
+}
+
+.degree, .experience{
+    width:70%
+}
+.center{
+    text-align: center;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 40px auto;
+  }
+ 
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #06A763;
+    top: 0;
+    bottom: 290px;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+
+.round {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .round::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: -26px;
+    background: #06A763;
+    top: -5px;
+    border-radius: 100%;
+    /* z-index: 1;
+    color: white;
+    padding: 0px;
+    font-size: 30px;
+    text-align: center; */
+  }
+
+
+  .left-side {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right-side {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left-side::before {
+    content: " ";
+    height: 5px;
+    position: absolute;
+    top: 25px;
+    width: 60px;
+    z-index: 1;
+    right: 0px;
+    background: #06A763;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right-side::before {
+    content: " ";
+    height: 5px;
+    position: absolute;
+    top: 25px;
+    width: 60px;
+    z-index: 1;
+    left: 0px;
+    background: #06A763;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right-side::after {
+    left:-26px;
+  }
+  
+  .content::after{
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    border: 1px solid white;
+    width:400px;
+    height:200px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+    
+  }
+  
+  /* The actual content */
+  .content-left {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    border: 1px solid white;
+    width:400px;
+    height:300px;
+    right:43px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+    
+  }
+  .content-right {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    border: 1px solid white;
+    width:400px;
+    height:300px;
+    left:20px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+    
+  }
+
+
+.skill-bar-percent{
+    position: relative;
+    /* right: 1px; */
+    bottom: 48px;
+    /* font-size: .8em; */
+    line-height: 15px;
+    /* color: #fff; */
+    /* left: 315px; */
+    float: right;
+}
+.prog-bar{
+    margin-bottom: 10px;
+    margin-top:5px;
+}
+
+.skills-content{
+    padding: 40px;
+    background-color: #06A763;
+    margin-top: 40px;
+}
+.experience{
+    margin-top: 50px;
+}
+
+/* tab */
+.interest-content{
+    border-bottom: 1px solid rgba(160, 160, 160, 0.2);
+    padding: 40px;
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+   
+    
+}
+ 
+.interest-content + .row{
+    margin-left: 0px!important;
+    
+}
+.interest-row:nth-child(odd){
+ height:100px;
+ background-color: #06A763;
+ color:white
+ 
+}
+.interest-row:nth-child(even){
+ height:100px;
+ background-color: #fff;
+ color: #06A763;
+}
+.margin{
+    margin-bottom:25px;
+}
+.margin-left-right{
+margin-left: 0px!important;
+margin-right: 0px!important;
+}
+.icon, .icon-name{
+    top: 24px;
+    font-size: 25px;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+.menu-button{
+    left: 51px; /*left:250px  */
+    border: 1px solid lightblue;
+    position: fixed;
+    top: 20px;
+}
+.menu-button>.bar{
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+.change .top-bar {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .middle-bar {opacity: 0;}
+  
+  .change .bottom-bar {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+.menu{
+    position: fixed;
+    top: 0px;
+    width: 228px;
+    height: 100%;
+    left: 0px;
+    z-index: 9;
+}
+.options>a>i{
+    padding:7px;
+
+}
+
+.menu .options{
+    position: fixed;
+    padding-top: 200px;
+
+}
+.options> a{
+    margin-left: 30px;
+    margin-right: 30px;
+    color: #616161;
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.side-menu{
+    background-color: white;
+    position: absolute;
+    top: 0px;
+    width: 228px;
+    height: 100%;
+    left: 0px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.text-content{
+    font-weight: 600;
+    top: 35px;
+    width: 145px;
+    height: 133px;
+    border: 5px solid white;
+    position: absolute;
+    background-color: #06A763;
+    left: 37px;
+    padding: 5px;
+    font-size: 80px;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+}
+#scrollup{
+    color: rgb(245, 245, 245);
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    font-size: 28px;
+    text-align: center;
+    position: fixed;
+    bottom: 21px;
+    right: 18px;
+    z-index: 5;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 5px 11px 0px, rgba(0, 0, 0, 0.15) 0px 4px 15px 0px;
+    display: none;
+    background: rgb(25, 118, 210);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(25, 118, 210);
+    border-image: initial;
+    transition: all 0.3s ease 0s;
+}
+
+/* position: fixed;
+top: 0px;
+width: 228px;
+height: 100%;
+left: -228px;
+z-index: 9; */
+  .user-first-letter-left{
+    font-size: 32px;
+    left: 113%;
+    position: absolute;
+    top: -10px;
+    z-index: 1;
+    text-transform: capitalize;
+    color: white;
+     
+
+  }
+  .user-first-letter-right{
+    font-size: 32px;
+    left: -18%;
+    position: absolute;
+    top: -10px;
+    z-index: 1;
+    text-transform: capitalize;
+    color: white;
+     
+
+  }
+
+  .user-Job{
+    margin-bottom: 19px;
+
+  }
+  .user-Job .field{
+    position: relative;
+    top: 4px;
+    left: 255px;
+    margin-top:5px;
+    z-index: 1;
+      
+  }
+  .user-Job .job{
+    position: absolute;
+    top: 100px;
+    left: 55px;
+    margin-top:5px;
+    
+ }
+  input{
+    width:250px;
+    border-radius:5px;
+    padding:5px;
+    height:30px;
+    border:2px solid 9c6e6e;
+    outline:white;
+    box-shadow: 0px 0px 5px 1px white;
+    font-family: cursive
+  }
+
+  .contactInfo input{
+    margin-bottom:5px;
+    }
+
+  textarea{
+      border:2px solid black;
+      border-radius: 20px;
+      outline:white;
+      box-shadow: 0px 0px 7px 3px white;
+      resize:none;
+
+  }
+
+.inp-per{
+    width: 85px;
+    position: relative;
+    bottom: 60px;
+    left: 235px;
+  }
+
+  .margin-8px{
+      margin-top:8px;
+  }
+
+
+.add-profile{ 
+    left: 57%;
+    height: 55px;
+    width: 55px;
+    padding: 0;
+    border-radius: 50%;
+    transition: .3s;
+    cursor: pointer;
+    position: absolute;
+    top: 36%;
+  }
+ .profile-icon   { 
+    line-height: 53px;
+    font-size: 25px;
+    text-align: center;
+    padding-left:3px;
+}
+
+@media (max-width: 1280px) {
+    .profileCard{
+        width:71%!important
+    }
+    .content-left {
+        right: 68px;
+    }
+    .user-Job .field{
+        width:190px
+    }
+}
+
+
+  
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    
+    .triangleslope{
+        left:50%
+    }
+    
+    .profileCard{
+        width:75%
+    }
+     .content-left{
+         right:86px;
+     }
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .profileCard{
+    width: 101%;
+    max-width: 900px
+  }
+  .triangleslope{
+    left:43%
+}
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+ 
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width:481px) and (max-width: 767px) {
+    .profileCard{
+        max-width:540px
+    }
+    .triangleslope{
+        left:43%
+    }
+    
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    .profileCard{
+        width:143%
+    }
+  }
