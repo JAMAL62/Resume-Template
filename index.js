@@ -2,6 +2,7 @@ angular.module('OwnResume', ['ngFileUpload']).controller('OwnResumeController', 
   $scope.isNone = false
   $scope.isLoad = true
   $scope.isPrintDiv = true;
+  $scope.isProfile = true;
   document.body.style.backgroundColor = "bisque"
   $scope.resumeInfo = {
     userInfo: {}
@@ -43,13 +44,13 @@ angular.module('OwnResume', ['ngFileUpload']).controller('OwnResumeController', 
       education.eduDetail = !education.eduDetail
     });
     $scope.userExperienceDetails.forEach(function (experience, index) {
-      experience.userExp = true
+      experience.userExp = !experience.userExp
     });
     $scope.userInterests.forEach(function (interest, index) {
-      interest.userIsActive = true
+      interest.userIsActive = !interest.userIsActive
     });
     $scope.tabs.forEach(function (tab, index) {
-      tab.tabActive = true
+      tab.tabActive = !tab.tabActive
     });
     $scope.isSkillEdit = !$scope.isSkillEdit
     $scope.isPersonalSkill = !$scope.isPersonalSkill;
@@ -176,12 +177,15 @@ angular.module('OwnResume', ['ngFileUpload']).controller('OwnResumeController', 
       if (tabInfo[tab] == "") {
         tabInfo[tab] = $scope.editTabs[index][tab]
       }
+       $scope.userInterests[index].userTabName=tabInfo['tabName'];
     }
+    userInterestDb($scope.userInterests)
     $scope.tabs[index].tabActive = false
     userTabDbUpdate($scope.tabs)
   }
 
   $scope.selectedImage = function (file, newFile) {
+    $scope.isProfile=false
     var fileData = ""
     if (file.name === newFile[0].name) {
       fileData = file
@@ -194,7 +198,8 @@ angular.module('OwnResume', ['ngFileUpload']).controller('OwnResumeController', 
 
     imageStoreInStorage(fileData, fileData.name)
     AddImageToDb(fileData.name);
-
+    $scope.isProfile=true
+    
     // var reader = new FileReader();
 
     // reader.readAsDataURL(fileData)
@@ -243,7 +248,7 @@ angular.module('OwnResume', ['ngFileUpload']).controller('OwnResumeController', 
     setTimeout(function () {
       preloader()
       document.body.style.backgroundColor = "#fff"
-    }, 2000)
+    }, 3000)
   }
 })
 
