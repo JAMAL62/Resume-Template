@@ -248,7 +248,7 @@ angular.module('OwnResume', ['ngFileUpload']).controller('OwnResumeController', 
     $timeout(function () {
       preloader()
       document.body.style.backgroundColor = "#fff"
-    }, 2000)
+    }, 500)
   }
 })
 
