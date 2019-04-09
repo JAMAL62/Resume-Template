@@ -75,9 +75,9 @@
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12 profile">
                     <div class="triangleslope" style="z-index:1"></div>
-                    <div class="btn btn-primary add-profile" ng-show= "isProfile" style="z-index:1" data-html2canvas-ignore="true" ngf-select="selectedImage($file,$newFiles)"  ngf-keep="true"    ngf-accept="'image/*'">
+                    <div class="btn btn-primary add-profile"  style="z-index:1" data-html2canvas-ignore="true" ngf-select="selectedImage($file,$newFiles)"  ngf-keep="true"    ngf-accept="'image/*'">
                             <i class="fa fa-plus profile-icon" ng-show="isProfile"></i>
-                            <i class="fa fa-spinner profile-icon" ng-hide="isProfile"></i>
+                            <i class="fa fa-spinner profile-icon spinner" ng-hide="isProfile"></i>
                            
                     </div>
                     <img  ng-src="{{image}}" class="float-right dpImg">

@@ -198,7 +198,7 @@ angular.module('OwnResume', ['ngFileUpload']).controller('OwnResumeController', 
 
     imageStoreInStorage(fileData, fileData.name)
     AddImageToDb(fileData.name);
-    $scope.isProfile=true
+    
     
     // var reader = new FileReader();
 
@@ -382,8 +382,10 @@ angular.module('OwnResume', ['ngFileUpload']).controller('OwnResumeController', 
     var nn = storageRef.child('image/' + data);
     nn.getDownloadURL().then(function (downloadURL) {
       $scope.$apply(function () {
+        $scope.isProfile=true
         $scope.image = downloadURL
         $scope.editImage = angular.copy($scope.image)
+       
       })
     })
   }
