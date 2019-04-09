@@ -1,4 +1,4 @@
-angular.module('OwnResume', ['ngFileUpload']).controller('OwnResumeController', function ($scope, $window, ResumeService) {
+angular.module('OwnResume', ['ngFileUpload']).controller('OwnResumeController', function ($scope, $timeout, ResumeService) {
   $scope.isNone = false
   $scope.isLoad = true
   $scope.isPrintDiv = true;
@@ -47,7 +47,7 @@ angular.module('OwnResume', ['ngFileUpload']).controller('OwnResumeController', 
       experience.userExp = !experience.userExp
     });
     $scope.userInterests.forEach(function (interest, index) {
-      interest.userIsActive = !interest.userIsActive
+      interest.userIsActive = ! interest.userIsActive
     });
     $scope.tabs.forEach(function (tab, index) {
       tab.tabActive = !tab.tabActive
@@ -245,7 +245,7 @@ angular.module('OwnResume', ['ngFileUpload']).controller('OwnResumeController', 
 
   document.addEventListener('readystatechange',function(){
   if(document.readyState =="complete"){
-    setTimeout(function () {
+    $timeout(function () {
       preloader()
       document.body.style.backgroundColor = "#fff"
     }, 3000)
