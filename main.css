@@ -542,7 +542,7 @@ z-index: 9; */
     ##Screen = B/w 1025px to 1280px
   */
   
-@media(max-width:1366px){
+@media(min-width:1326px){
     .triangleslope{
         left:51%
     }
