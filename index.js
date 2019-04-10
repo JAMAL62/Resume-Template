@@ -243,14 +243,12 @@ angular.module('OwnResume', ['ngFileUpload']).controller('OwnResumeController', 
     $scope.isSoftwareSkill = false;
   }
 
-  document.addEventListener('readystatechange',function(){
-  if(document.readyState =="complete"){
-    $timeout(function () {
+ 
+  $timeout(function () {
       preloader()
       document.body.style.backgroundColor = "#fff"
-    }, 500)
-  }
-})
+    }, 200)
+  
 
 
   function preloader() {
