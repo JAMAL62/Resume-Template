@@ -542,12 +542,15 @@ z-index: 9; */
     ##Screen = B/w 1025px to 1280px
   */
   
-@media(min-width:1326px){
-    .triangleslope{
-        left:51%
-    }
+@media(max-width:1326px){
     .content-left{
-        right:52px;
+        right:51px;
+    }
+    .profileCard{
+        width:71%
+    }
+    .triangleslope{
+        margin-left: -3px;
     }
 }
 
